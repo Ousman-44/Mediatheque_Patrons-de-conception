@@ -16,8 +16,9 @@ public class Book extends Item {
 		this.author = author;
 	}	
 
-	public void print() {
-		System.out.println(this);
+	@Override
+	public void accept(Visitor v) {
+		v.visit(this);
 	}
 
 	@Override
