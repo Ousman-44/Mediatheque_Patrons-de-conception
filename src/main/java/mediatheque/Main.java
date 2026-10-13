@@ -19,12 +19,12 @@ public class Main {
         );
 
         System.out.println("=== CATALOGUE COMPLET ===");
-        mediatheque.printCatalog();
+        mediatheque.accept(new PrintCatalog());
 
         System.out.println("\n=== LIVRES UNIQUEMENT ===");
-        mediatheque.printOnlyBooks();
+        mediatheque.accept(new PrintOnlyBooksVisitor());
 
         System.out.println("\n=== CD UNIQUEMENT ===");
-        mediatheque.printOnlyCDs();
+        mediatheque.accept(new PrintOnlyCDsVisitor());
     }
 }
